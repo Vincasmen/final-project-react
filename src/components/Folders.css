@@ -1,0 +1,26 @@
+.folders-container {
+  width: 100%;
+}
+
+.folders-container h2 {
+  cursor: pointer;
+  margin-bottom: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #1db954; /* Spotify zelená barva */
+  transition: color 0.3s; /* Animace změny barvy */
+}
+
+.folders-container h2.selected {
+  color: #1e1e1e; /* Změna barvy vybraného nadpisu */
+}
+
+.folders-container p {
+  margin-top: 5px;
+  font-size: 16px;
+  color: #b3b3b3; /* Spotify šedá barva */
+}
+
+.folders-container p.hidden {
+  display: none; /* Skrytí popisu */
+}

@@ -1,0 +1,28 @@
+/* Hero.css */
+
+.hero-container {
+  background-color: #000000; /* Černé pozadí */
+  color: #ffffff; /* Bílý text */
+  padding: 50px 0; /* Vnější okraje */
+}
+
+.intro-section {
+  text-align: center; /* Zarovnání obsahu na střed */
+}
+
+.intro-image {
+  width: 100%; /* Šířka obrázku na 100% */
+  border-radius: 8px; /* Zaoblené rohy */
+  margin-bottom: 20px; /* Mezera pod obrázkem */
+}
+
+.main-heading {
+  font-size: 36px; /* Velikost nadpisu */
+  margin-bottom: 20px; /* Mezera pod nadpisem */
+  color: #1db954; /* Barva značky Spotify */
+}
+
+p {
+  font-size: 18px; /* Velikost textu */
+  line-height: 1.5; /* Řádkování */
+}

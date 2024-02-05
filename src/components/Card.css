@@ -1,0 +1,57 @@
+/* Card.css */
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap; /* Flexbox s možností zalamování obsahu na nový řádek */
+  justify-content: center; /* Zarovnání karet na střed */
+  gap: 15px; /* Mezera mezi kartami */
+}
+
+.card {
+  width: 100%; /* Karty zabírají celou šířku kontejneru */
+  margin-bottom: 15px; /* Mezera mezi kartami */
+}
+
+@media screen and (min-width: 426px) {
+  .cards-container {
+    flex-direction: row; /* Karty se začnou skládat vedle sebe */
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .cards-container {
+    max-width: 1024px; /* Maximální šířka kontejneru pro karty */
+    margin-left: auto; /* Zarovnání karet na střed */
+    margin-right: auto; /* Zarovnání karet na střed */
+    padding-left: 15px; /* Odsazení vlevo od okraje obrazovky */
+    padding-right: 15px; /* Odsazení vpravo od okraje obrazovky */
+  }
+}
+
+.card-content {
+  width: 100%;
+  border-radius: 10px;
+  background-color: #1e1e1e; /* Spotify černá barva */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.product-image {
+  width: 100%;
+}
+
+.content {
+  padding: 10px;
+  text-align: center; /* zarovnání textu do středu */
+}
+
+.title {
+  font-size: 18px;
+  color: #ffffff; /* bílá barva */
+  margin-bottom: 5px;
+}
+
+.description {
+  font-size: 14px;
+  color: #b3b3b3; /* Spotify šedá barva */
+}
