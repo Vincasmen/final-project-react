@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import "./Hero.css";
 
 const Hero = () => {
@@ -10,14 +10,14 @@ const Hero = () => {
 
   const [currentText, setCurrentText] = useState("");
 
-  useEffect(() => {
-    setCurrentText(generateRandomText());
-  }, []);
-
-  const generateRandomText = () => {
+  const generateRandomText = useCallback(() => {
     const randomIndex = Math.floor(Math.random() * texts.length);
     return texts[randomIndex];
-  };
+  }, [texts]);
+
+  useEffect(() => {
+    setCurrentText(generateRandomText());
+  }, [generateRandomText]);
 
   return (
     <div className="hero-container">
