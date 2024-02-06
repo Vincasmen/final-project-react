@@ -1,29 +1,31 @@
 import React, { useState } from "react";
-import { Signs } from "../data";
+import { Months } from "../data";
 import "./Folders.css";
 
 const Folders = () => {
-  const [selectedSign, setSelectedSign] = useState(null);
-
-  const handleClick = (signName) => {
-    setSelectedSign(selectedSign === signName ? null : signName);
-  };
+  const [selectedMonth, setSelectedMonth] = useState(null);
 
   return (
     <div className="folders-container">
-      {Signs.map((sign, index) => (
-        <div key={index}>
-          <h2
-            className={selectedSign === sign.name ? "selected" : ""}
-            onClick={() => handleClick(sign.name)}
-          >
-            {sign.name}
-          </h2>
-          <p className={selectedSign === sign.name ? "" : "hidden"}>
-            {sign.description}
+      <select
+        value={selectedMonth}
+        onChange={(e) => setSelectedMonth(e.target.value)}
+        className="months-dropdown"
+      >
+        <option value="">Vyberte měsíc</option>
+        {Months.map((month, index) => (
+          <option key={index} value={month.name}>
+            {month.name}
+          </option>
+        ))}
+      </select>
+      <div className="description-container">
+        {selectedMonth && (
+          <p>
+            {Months.find((month) => month.name === selectedMonth).description}
           </p>
-        </div>
-      ))}
+        )}
+      </div>
     </div>
   );
 };

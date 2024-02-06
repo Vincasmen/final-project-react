@@ -1,7 +1,6 @@
-/* navbar.css */
-
 nav {
   background-color: #333;
+  text-align: right;
 }
 
 ul {
@@ -12,7 +11,7 @@ ul {
 }
 
 li {
-  float: left;
+  display: inline-block;
 }
 
 li a {
@@ -23,11 +22,16 @@ li a {
   text-decoration: none;
 }
 
-/* Change the link color to orange on hover */
 li a:hover {
   background-color: #111;
 }
 
 .active {
   background-color: #4caf50;
+}
+
+@media screen and (min-width: 768px) {
+  nav {
+    text-align: center;
+  }
 }

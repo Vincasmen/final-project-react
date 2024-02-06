@@ -1,28 +1,49 @@
-/* Hero.css */
-
 .hero-container {
-  background-color: #000000; /* Černé pozadí */
-  color: #ffffff; /* Bílý text */
-  padding: 50px 0; /* Vnější okraje */
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
 }
 
 .intro-section {
-  text-align: center; /* Zarovnání obsahu na střed */
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .intro-image {
-  width: 100%; /* Šířka obrázku na 100% */
-  border-radius: 8px; /* Zaoblené rohy */
-  margin-bottom: 20px; /* Mezera pod obrázkem */
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
 
 .main-heading {
-  font-size: 36px; /* Velikost nadpisu */
-  margin-bottom: 20px; /* Mezera pod nadpisem */
-  color: #1db954; /* Barva značky Spotify */
+  font-size: 36px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #1db954;
 }
 
-p {
-  font-size: 18px; /* Velikost textu */
-  line-height: 1.5; /* Řádkování */
+.intro-section p {
+  font-size: 16px;
+  line-height: 1.6;
+  animation: fadeIn ease-in 1s; /* Ease in animation for the paragraph */
+}
+
+@media screen and (min-width: 768px) {
+  .main-heading {
+    font-size: 48px;
+  }
+
+  .intro-section p {
+    font-size: 20px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

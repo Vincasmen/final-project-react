@@ -7,18 +7,13 @@ const Navbar = () => {
     <nav>
       <ul>
         <li>
-          <NavLink exact to="/" activeclassname="active">
-            Domů
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/signs" activeclassname="active">
-            Značky
+          <NavLink to="/" activeclassname="active">
+            Home
           </NavLink>
         </li>
         <li>
           <NavLink to="/form" activeclassname="active">
-            Formulář
+            Form
           </NavLink>
         </li>
       </ul>

@@ -1,26 +1,54 @@
 .folders-container {
+  max-width: 1200px;
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.months-dropdown {
   width: 100%;
-}
-
-.folders-container h2 {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
-  margin-bottom: 5px;
-  font-size: 20px;
-  font-weight: bold;
-  color: #1db954; /* Spotify zelená barva */
-  transition: color 0.3s; /* Animace změny barvy */
+  appearance: none;
 }
 
-.folders-container h2.selected {
-  color: #1e1e1e; /* Změna barvy vybraného nadpisu */
+.months-dropdown:focus {
+  outline: none;
 }
 
-.folders-container p {
+.description-container {
+  margin-top: 20px;
+}
+
+.description-container p {
   margin-top: 5px;
   font-size: 16px;
-  color: #b3b3b3; /* Spotify šedá barva */
+  color: #b3b3b3;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 5px;
+  animation: fadeIn ease-in 1s; /* Ease in animation for the paragraph */
 }
 
-.folders-container p.hidden {
-  display: none; /* Skrytí popisu */
+.description-container p.hidden {
+  display: none;
+}
+
+.dropdown-icon {
+  margin-right: 5px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

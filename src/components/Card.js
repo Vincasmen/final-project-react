@@ -1,6 +1,6 @@
 // Card.js
 import React from "react";
-import { CardsData } from "../data"; // Importujeme CardsData z data.js
+import { CardsData } from "../data";
 import "./Card.css";
 
 const Card = () => {
@@ -11,7 +11,7 @@ const Card = () => {
           <div className="card-content">
             <img
               src={card.image}
-              alt="Product Image"
+              alt="holiday-card"
               className="product-image"
             />
             <div className="content">
