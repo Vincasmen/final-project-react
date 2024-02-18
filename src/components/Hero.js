@@ -1,23 +1,19 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 import "./Hero.css";
 
-const Hero = () => {
-  const [texts, setTexts] = useState([
-    "During the summer holidays, my family and I went camping in the mountains.",
-    "After months of hard work, she finally took a well-deserved vacation to explore exotic destinations.",
-    "The holiday season is a time for reconnecting with loved ones and creating cherished memories together.",
-  ]);
+const texts = [
+  "During the summer holidays, my family and I went camping in the mountains.",
+  "After months of hard work, she finally took a well-deserved vacation to explore exotic destinations.",
+  "The holiday season is a time for reconnecting with loved ones and creating cherished memories together.",
+];
 
+const Hero = () => {
   const [currentText, setCurrentText] = useState("");
 
-  const generateRandomText = useCallback(() => {
-    const randomIndex = Math.floor(Math.random() * texts.length);
-    return texts[randomIndex];
-  }, [texts]);
-
   useEffect(() => {
-    setCurrentText(generateRandomText());
-  }, [generateRandomText]);
+    const randomIndex = Math.floor(Math.random() * texts.length);
+    setCurrentText(texts[randomIndex]);
+  }, []);
 
   return (
     <div className="hero-container">

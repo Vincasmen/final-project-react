@@ -1,4 +1,3 @@
-// Card.js
 import React from "react";
 import { CardsData } from "../data";
 import "./Card.css";
